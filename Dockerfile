@@ -1,6 +1,6 @@
 FROM node:7.10
 
-MAINTAINER Ben Wright
+MAINTAINER PunditSharp
 
 # Set environment variables
 ENV DEBIAN_FRONTEND noninteractive
