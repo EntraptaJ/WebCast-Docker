@@ -1,4 +1,5 @@
 #!/bin/bash
 
 # Start CastWebAPI
-node /castwebapi/castWebApi.js --hostname=(ip route get 1 | awk '{print $NF;exit}')
+ipaddr=$(ip route get 1 | awk '{print $NF;exit}')
+node /castwebapi/castWebApi.js --hostname=$ipaddr
