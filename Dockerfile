@@ -14,8 +14,8 @@ RUN apt-get update; \
 
 # Get latest script from Git
 # -------------------------------------------------------------------------
-RUN mkdir -p /castwebapi
-RUN git clone https://github.com/vervallsweg/cast-web-api.git /castwebapi
+WORKDIR /castwebapi
+RUN git clone https://github.com/vervallsweg/cast-web-api.git
 
 ADD image/run.sh /root/run.sh
 
