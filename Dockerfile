@@ -14,13 +14,13 @@ RUN apt-get update; \
 
 WORKDIR /castwebapi
 
-RUN npm install -g castv2; \
-    npm install -g castv2-client; \
-    npm install -g debug; \
-    npm install -g http; \
-    npm install -g url; \
-    npm install -g minimist; \
-    npm install -g mdns
+RUN npm install castv2; \
+    npm install castv2-client; \
+    npm install debug; \
+    npm install http; \
+    npm install url; \
+    npm install minimist; \
+    npm install mdns
     
 # Get latest script from Git
 # -------------------------------------------------------------------------
