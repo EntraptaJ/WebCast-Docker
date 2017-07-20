@@ -1,6 +1,6 @@
 FROM node:7.10
 
-MAINTAINER Marco Raddatz
+MAINTAINER Ben Wright
 
 # Set environment variables
 ENV DEBIAN_FRONTEND noninteractive
@@ -13,14 +13,9 @@ RUN apt-get update; \
     apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev; \
     apt-get install -y nano vim
 
-# Install latest Homebridge
+# Get latest script from Git
 # -------------------------------------------------------------------------
-# You can force a specific version by setting HOMEBRIDGE_VERSION
-# See https://github.com/marcoraddatz/homebridge-docker#homebridge_version
-RUN npm install -g homebridge --unsafe-perm
-
-# Final settings
-COPY avahi-daemon.conf /etc/avahi/avahi-daemon.conf
+RUN git clone https://github.com/vervallsweg/cast-web-api.git /root
 
 USER root
 RUN mkdir -p /var/run/dbus
