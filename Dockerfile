@@ -25,7 +25,7 @@ RUN npm install -g castv2; \
 # Get latest script from Git
 # -------------------------------------------------------------------------
 
-RUN git clone https://github.com/vervallsweg/cast-web-api.git
+RUN git clone https://github.com/vervallsweg/cast-web-api.git /castwebapi
 
 ADD image/run.sh /root/run.sh
 
