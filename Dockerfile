@@ -12,6 +12,14 @@ RUN apt-get update; \
     apt-get install -y curl wget; \
     apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev
 
+RUN npm install -g castv2; \
+    npm install -g castv2-client; \
+    npm install -g debug; \
+    npm install -g http; \
+    npm install -g url; \
+    npm install -g minimist; \
+    npm install -g mdns
+    
 # Get latest script from Git
 # -------------------------------------------------------------------------
 WORKDIR /castwebapi
