@@ -15,7 +15,7 @@ RUN apt-get update; \
 
 # Get latest script from Git
 # -------------------------------------------------------------------------
-RUN git clone https://github.com/vervallsweg/cast-web-api.git /root
+RUN git clone https://github.com/vervallsweg/cast-web-api.git /castwebapi
 
 USER root
 RUN mkdir -p /var/run/dbus
