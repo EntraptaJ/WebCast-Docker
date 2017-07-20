@@ -11,7 +11,6 @@ RUN apt-get update; \
     apt-get install -y apt-utils apt-transport-https; \
     apt-get install -y curl wget; \
     apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev; \
-    apt-get install -y nano vim
 
 # Get latest script from Git
 # -------------------------------------------------------------------------
