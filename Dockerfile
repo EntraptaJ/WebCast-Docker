@@ -10,11 +10,11 @@ ENV TERM xterm
 RUN apt-get update; \
     apt-get install -y apt-utils apt-transport-https; \
     apt-get install -y curl wget; \
-    apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev; \
+    apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev
 
 # Get latest script from Git
 # -------------------------------------------------------------------------
-RUN mkdir /castwebapi
+WORKDIR /castwebapi
 RUN git clone https://github.com/vervallsweg/cast-web-api.git /castwebapi
 
 ADD image/run.sh /root/run.sh
