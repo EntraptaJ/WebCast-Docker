@@ -12,6 +12,8 @@ RUN apt-get update; \
     apt-get install -y curl wget; \
     apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev
 
+WORKDIR /castwebapi
+
 RUN npm install -g castv2; \
     npm install -g castv2-client; \
     npm install -g debug; \
@@ -22,8 +24,8 @@ RUN npm install -g castv2; \
     
 # Get latest script from Git
 # -------------------------------------------------------------------------
-WORKDIR /castwebapi
-RUN git clone https://github.com/vervallsweg/cast-web-api.git /castwebapi
+
+RUN git clone https://github.com/vervallsweg/cast-web-api.git
 
 ADD image/run.sh /root/run.sh
 
