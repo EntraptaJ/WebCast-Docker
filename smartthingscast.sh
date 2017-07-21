@@ -4,8 +4,8 @@ BASEDIR=$(dirname $0)
 cd $BASEDIR
 
 VERSION=$(<VERSION)
-IMAGE_NAME="PunditSharp/castwebapi"
-CONTAINER_NAME=CastWebAPI
+IMAGE_NAME="PunditSharp/smartthingscast"
+CONTAINER_NAME=SmartThingsCast
 
 ACTION=$1
 
@@ -22,12 +22,12 @@ _build() {
 
 # Run (first time)
 _run() {
-  docker run -d --name $CONTAINER_NAME --net=host -p 5353:5353 -p 51826:51826 -v /volume1/docker/castwebapi:/root/.castwebapi $IMAGE_NAME:$VERSION
+  docker run -d --name $CONTAINER_NAME --net=host -p 8080:8080 $IMAGE_NAME:$VERSION
 }
 
 # Debugging mode with terminal access
 _debug() {
-  docker run -i -t --entrypoint /bin/bash --name $CONTAINER_NAME --net=host -p 5353:5353 -p 51826:51826 -v /volume1/docker/castwebapi:/root/.castwebapi $IMAGE_NAME:$VERSION
+  docker run -i -t --entrypoint /bin/bash --name $CONTAINER_NAME --net=host -p 8080:8080 $IMAGE_NAME:$VERSION
 }
 
 # Stop
