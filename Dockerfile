@@ -31,5 +31,5 @@ RUN git clone https://github.com/germasch/smartthings-cast.git
 ADD image/run.sh /root/run.sh
 
 # Run container
-EXPOSE 3000
+EXPOSE 8080
 CMD ["/root/run.sh"]
