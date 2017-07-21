@@ -14,18 +14,19 @@ RUN apt-get update; \
 
 WORKDIR /castwebapi
 
-RUN npm install castv2; \
-    npm install castv2-client; \
-    npm install debug; \
-    npm install http; \
-    npm install url; \
-    npm install minimist; \
-    npm install mdns
+#RUN npm install castv2; \
+ #   npm install castv2-client; \
+  #  npm install debug; \
+   # npm install http; \
+    #npm install url; \
+    #npm install minimist; \
+    #npm install mdns
     
 # Get latest script from Git
 # -------------------------------------------------------------------------
 
-RUN git clone https://github.com/vervallsweg/cast-web-api.git
+#RUN git clone https://github.com/vervallsweg/cast-web-api.git
+RUN git clone https://github.com/germasch/smartthings-cast.git
 
 ADD image/run.sh /root/run.sh
 
