@@ -1,6 +1,4 @@
 #!/bin/bash
-
-cd smartthings-cast
 npm install
 
 # Start CastWebAPI
