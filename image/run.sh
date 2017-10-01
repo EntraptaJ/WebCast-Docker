@@ -1,4 +1,5 @@
 #!/bin/bash
+cd /castwebapi/castWeb/
 npm install
 
 # Start CastWebAPI
